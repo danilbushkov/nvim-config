@@ -17,4 +17,7 @@ opt.smartindent = true
 opt.listchars = { tab = ">~", space = "·"}
 opt.list = true
 
+opt.clipboard = "unnamedplus"
+
+
 
