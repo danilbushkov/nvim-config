@@ -28,13 +28,20 @@ return require('packer').startup(function(use)
     use {
         "navarasu/onedark.nvim",
         config = function() 
-            require('onedark').load()
+            require("onedark").load()
 
         end
 
     }
 
+    use {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup()
 
+        end
+
+    }
 
         
 
