@@ -19,5 +19,11 @@ opt.list = true
 
 opt.clipboard = "unnamedplus"
 
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+    pattern = {"Makefile"},
+    callback = function() 
+        vim.opt_local.expandtab = false
+    end,
+})
 
 
