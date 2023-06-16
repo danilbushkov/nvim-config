@@ -1,5 +1,5 @@
 function nmap(key, command)
-	vim.keymap.set("n", key, command)
+  vim.keymap.set("n", key, command)
 end
 
 
