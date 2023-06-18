@@ -12,7 +12,7 @@ return require('packer').startup(function(use)
       "MunifTanjim/nui.nvim",
     },
     config = function()
-      require("plagins/neotree")
+      --    require("plagins/neotree")
     end
   }
 
