@@ -49,15 +49,13 @@ return require('packer').startup(function(use)
   }
 
 
-
-
   use {
     "hrsh7th/nvim-cmp",
     config = function()
       local cmp = require 'cmp'
       cmp.setup({
         completion = {
-          autocompletion = false
+          autocomplete = false
         },
         snippet = {
           expand = function(args)
