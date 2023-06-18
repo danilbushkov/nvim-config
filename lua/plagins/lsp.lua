@@ -1,4 +1,6 @@
 local lspconfig = require("lspconfig")
+
+
 lspconfig.eslint.setup({})
 lspconfig.lua_ls.setup({
   settings = {
