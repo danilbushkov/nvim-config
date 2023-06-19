@@ -24,11 +24,7 @@ lspconfig.lua_ls.setup({
 })
 
 
-function test()
 
-end
-
-test()
 
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)

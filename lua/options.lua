@@ -18,3 +18,6 @@ opt.listchars = { tab = ">~", space = "·" }
 opt.list = true
 
 opt.clipboard = "unnamedplus"
+
+
+opt.scrolloff = 7
