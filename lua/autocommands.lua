@@ -20,7 +20,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   end
 })
 
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = { "*.js", "*.ts", "*.tsx", "*.jsx", "*.vue", "*.html", "*.css" },
   callback = function()
     vim.opt_local.tabstop = 2
