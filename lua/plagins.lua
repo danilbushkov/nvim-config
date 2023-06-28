@@ -58,4 +58,11 @@ return require('packer').startup(function(use)
       require("plagins/cmp")
     end
   }
+  use { 'akinsho/bufferline.nvim',
+    tag = "*",
+    requires = 'nvim-tree/nvim-web-devicons',
+    config = function()
+      require("bufferline").setup {}
+    end
+  }
 end)
