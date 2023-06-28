@@ -58,11 +58,29 @@ return require('packer').startup(function(use)
       require("plagins/cmp")
     end
   }
-  use { 'akinsho/bufferline.nvim',
+
+  use {
+    'akinsho/bufferline.nvim',
     tag = "*",
     requires = 'nvim-tree/nvim-web-devicons',
     config = function()
-      require("bufferline").setup {}
+      require("plagins/bufferline")
+    end
+  }
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+    config = function()
+      require("plagins/lualine")
+    end
+  }
+
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { { 'nvim-lua/plenary.nvim' } },
+    config = function()
+      require("plagins/telescope")
     end
   }
 end)

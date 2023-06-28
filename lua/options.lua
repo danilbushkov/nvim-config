@@ -1,3 +1,4 @@
+local g = vim.g
 local opt = vim.opt
 
 opt.number = true
@@ -21,3 +22,5 @@ opt.clipboard = "unnamedplus"
 
 
 opt.scrolloff = 7
+
+g.mapleader = " "
