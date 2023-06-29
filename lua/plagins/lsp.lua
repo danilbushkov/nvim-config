@@ -1,7 +1,17 @@
 local lspconfig = require("lspconfig")
 
 
+lspconfig.tsserver.setup({
+  on_attach = function(client, bufnr)
+    client.server_capabilities.document_formatting = false
+    client.server_capabilities.document_range_formatting = false
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+  end,
+})
+
 lspconfig.eslint.setup({
+  --- ...
   on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       buffer = bufnr,
@@ -31,6 +41,16 @@ lspconfig.lua_ls.setup({
   }
 })
 
+
+
+
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+lspconfig.cssls.setup({
+  capabilities = capabilities,
+
+})
 
 
 
