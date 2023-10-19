@@ -20,6 +20,8 @@ lspconfig.tsserver.setup({
 --  end,
 --})
 
+lspconfig.rust_analyzer.setup({})
+
 lspconfig.lua_ls.setup({
   settings = {
     Lua = {
