@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
 })
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  pattern = '*',
+  pattern = "*",
   callback = function()
     vim.lsp.buf.format()
   end
@@ -26,4 +26,11 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     vim.opt_local.tabstop = 2
     vim.opt_local.shiftwidth = 2
   end
+})
+
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "*.go" },
+  callback = function()
+    vim.opt_local.expandtab = false
+  end,
 })
