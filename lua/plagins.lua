@@ -97,4 +97,12 @@ return require("packer").startup(function(use)
       require("nvim-autopairs").setup({})
     end
   }
+
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+    config = function()
+      require("plagins/treesitter")
+    end
+  }
 end)
