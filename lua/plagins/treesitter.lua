@@ -18,6 +18,7 @@ configs.setup({
     "yaml",
     "bash",
     "dockerfile",
+    "tsx"
   },
   highlight = {
     enable = true,
