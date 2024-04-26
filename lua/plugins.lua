@@ -61,6 +61,7 @@ require("lazy").setup({
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
       "L3MON4D3/LuaSnip",
+      "hrsh7th/cmp-nvim-lsp"
     },
     config = function()
       require("plugins/cmp")
