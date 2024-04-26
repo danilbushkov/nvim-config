@@ -1,4 +1,4 @@
 require("options")
-require("plagins")
+require("plugins")
 require("mappings")
 require("autocommands")

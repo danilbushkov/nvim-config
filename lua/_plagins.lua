@@ -1,20 +1,40 @@
-vim.cmd [[packadd packer.nvim]]
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+require("lazy").setup({
+  "nvim-neo-tree/neo-tree.nvim",
+  config = function()
+    require("plagins/neotree")
+  end
+
+})
+
 
 return require("packer").startup(function(use)
-  use "wbthomason/packer.nvim"
+  --  use "wbthomason/packer.nvim"
 
-  use {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    requires = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-    config = function()
-      require("plagins/neotree")
-    end
-  }
+  --  use {
+  --    "nvim-neo-tree/neo-tree.nvim",
+  --    branch = "v3.x",
+  --    requires = {
+  --      "nvim-lua/plenary.nvim",
+  --      "nvim-tree/nvim-web-devicons",
+  --      "MunifTanjim/nui.nvim",
+  --    },
+  --    config = function()
+  --      require("plagins/neotree")
+  --    end
+  --  }
 
   use {
     "hrsh7th/cmp-nvim-lsp"
@@ -26,22 +46,22 @@ return require("packer").startup(function(use)
     "saadparwaiz1/cmp_luasnip"
   }
 
-  use {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require("plagins/lsp")
-    end
+  --  use {
+  --    "neovim/nvim-lspconfig",
+  --    config = function()
+  --      require("plagins/lsp")
+  --    end
+  --
+  --  }
 
-  }
 
-
-  use {
-    "navarasu/onedark.nvim",
-    config = function()
-      require("onedark").load()
-    end
-
-  }
+  --  use {
+  --    "navarasu/onedark.nvim",
+  --    config = function()
+  --      require("onedark").load()
+  --    end
+  --
+  --  }
 
   use {
     "lewis6991/gitsigns.nvim",
