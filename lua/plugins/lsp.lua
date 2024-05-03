@@ -18,6 +18,8 @@ lspconfig.rust_analyzer.setup({})
 
 lspconfig.gopls.setup({})
 
+lspconfig.texlab.setup({})
+
 lspconfig.lua_ls.setup({
   settings = {
     Lua = {

@@ -111,5 +111,13 @@ require("lazy").setup({
       require("glow").setup()
     end
 
+  },
+  {
+    "lervag/vimtex",
+    tag = "v2.14",
+    lazy = false,
+    init = function()
+      vim.g.vimtex_view_method = "zathura"
+    end
   }
 })
