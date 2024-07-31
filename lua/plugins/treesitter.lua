@@ -18,7 +18,8 @@ configs.setup({
     "yaml",
     "bash",
     "dockerfile",
-    "tsx"
+    "tsx",
+    "php"
   },
   highlight = {
     enable = true,

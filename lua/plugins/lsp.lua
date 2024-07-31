@@ -18,6 +18,8 @@ lspconfig.rust_analyzer.setup({})
 
 lspconfig.gopls.setup({})
 
+lspconfig.phpactor.setup({})
+
 lspconfig.texlab.setup({})
 
 lspconfig.lua_ls.setup({
