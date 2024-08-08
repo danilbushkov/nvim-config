@@ -2,7 +2,7 @@ local lspconfig = require("lspconfig")
 
 
 lspconfig.tsserver.setup({
-  on_attach = function(client, bufnr)
+  on_attach = function(client)
     client.server_capabilities.document_formatting = false
     client.server_capabilities.document_range_formatting = false
     client.server_capabilities.documentFormattingProvider = false
@@ -19,6 +19,10 @@ lspconfig.rust_analyzer.setup({})
 lspconfig.gopls.setup({})
 
 lspconfig.phpactor.setup({})
+
+lspconfig.dockerls.setup({})
+
+lspconfig.yamlls.setup({})
 
 lspconfig.texlab.setup({})
 
