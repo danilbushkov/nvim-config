@@ -22,7 +22,7 @@ require("lazy").setup({
     },
     keys = {
       { "<C-f>", "<cmd>Neotree toggle reveal<cr>" },
-      { "<C-a>", "<cmd>Neotree reveal<cr>" },
+      { "<C-a>", "<cmd>Neotree reveal_force_cwd<cr>" },
       { "<C-b>", "<cmd>Neotree toggle reveal buffers right<cr>" },
       { "<C-s>", "<cmd>Neotree float git_status<cr>" },
     },
