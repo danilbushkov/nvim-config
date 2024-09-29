@@ -26,7 +26,7 @@ lspconfig.yamlls.setup({})
 
 lspconfig.texlab.setup({})
 
-lspconfig.angularls.setup({})
+lspconfig.jdtls.setup({})
 
 lspconfig.lua_ls.setup({
   settings = {

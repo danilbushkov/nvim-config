@@ -20,7 +20,7 @@ configs.setup({
     "dockerfile",
     "tsx",
     "php",
-    "angular"
+    "java"
   },
   highlight = {
     enable = true,
