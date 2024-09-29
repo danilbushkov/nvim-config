@@ -20,7 +20,8 @@ configs.setup({
     "dockerfile",
     "tsx",
     "php",
-    "java"
+    "java",
+    "markdown"
   },
   highlight = {
     enable = true,
