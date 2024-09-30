@@ -10,9 +10,7 @@ lspconfig.ts_ls.setup({
   end,
 })
 
-lspconfig.eslint.setup({})
-
-
+-- lspconfig.eslint.setup({})
 
 lspconfig.rust_analyzer.setup({})
 
