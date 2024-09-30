@@ -1,7 +1,7 @@
 local lspconfig = require("lspconfig")
 
 
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
   on_attach = function(client)
     client.server_capabilities.document_formatting = false
     client.server_capabilities.document_range_formatting = false
