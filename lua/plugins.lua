@@ -100,12 +100,6 @@ require("lazy").setup({
     end
   },
   {
-    "windwp/nvim-autopairs",
-    config = function()
-      require("nvim-autopairs").setup({})
-    end
-  },
-  {
     "ellisonleao/glow.nvim",
     config = function()
       require("glow").setup()
