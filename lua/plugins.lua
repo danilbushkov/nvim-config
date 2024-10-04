@@ -107,6 +107,10 @@ require("lazy").setup({
 
   },
   {
+    "windwp/nvim-autopairs",
+    opts = {}
+  },
+  {
     "lervag/vimtex",
     tag = "v2.14",
     lazy = false,
