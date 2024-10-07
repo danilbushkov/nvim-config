@@ -26,7 +26,15 @@ lspconfig.texlab.setup({})
 
 lspconfig.jdtls.setup({})
 
-lspconfig.nil_ls.setup({})
+lspconfig.nil_ls.setup({
+  settings = {
+    ["nil"] = {
+      formatting = {
+        command = { "nixfmt" },
+      },
+    },
+  },
+})
 
 lspconfig.lua_ls.setup({
   settings = {
