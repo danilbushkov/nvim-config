@@ -11,7 +11,6 @@ lspconfig.ts_ls.setup({
 })
 
 -- lspconfig.eslint.setup({})
-lspconfig.html.setup({})
 
 lspconfig.rust_analyzer.setup({})
 
@@ -74,10 +73,14 @@ lspconfig.cssls.setup({
 
 })
 
-lspconfig.jsonls.setup {
+lspconfig.jsonls.setup({
   capabilities = capabilities,
-}
+})
 
+
+lspconfig.html.setup({
+  capabilities = capabilities,
+})
 
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
