@@ -11,6 +11,7 @@ lspconfig.ts_ls.setup({
 })
 
 -- lspconfig.eslint.setup({})
+lspconfig.html.setup({})
 
 lspconfig.rust_analyzer.setup({})
 
