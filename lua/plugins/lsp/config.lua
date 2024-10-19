@@ -73,31 +73,7 @@ return function()
     },
   })
 
-  lspconfig.lua_ls.setup({
-    settings = {
-      Lua = {
-
-        enable = true,
-        format = {
-          enable = true,
-          defaultConfig = {
-            indent_style = "space",
-            indent_size = "2",
-            quote_style = "double",
-            continuation_indent = "2",
-          }
-        },
-        diagnostics = {
-
-          globals = {
-            "vim",
-            "require"
-          },
-        },
-      }
-
-    }
-  })
+  lspconfig.lua_ls.setup({})
 
 
 

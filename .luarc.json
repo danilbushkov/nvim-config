@@ -1,0 +1,10 @@
+{
+  "format": {
+    "enable": true
+  },
+  "diagnostics": {
+    "globals": [
+      "vim"
+    ]
+  }
+}
