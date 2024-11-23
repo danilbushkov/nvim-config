@@ -22,6 +22,7 @@ return {
       "tsx",
       "php",
       "java",
+      "scala",
       "markdown"
     },
     highlight = {
