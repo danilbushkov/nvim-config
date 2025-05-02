@@ -35,6 +35,24 @@ return function()
     end,
   })
 
+
+
+  vim.lsp.enable("lua_ls")
+  vim.lsp.enable("rust_analyzer")
+
+
+  vim.lsp.enable("nil_ls")
+  vim.lsp.config("nil_ls", {
+    settings = {
+      ["nil"] = {
+        formatting = {
+          command = { "nixfmt" },
+        },
+      },
+    },
+  })
+
+  -- ### deprecated ###
   local lspconfig = require("lspconfig")
 
 
@@ -49,7 +67,6 @@ return function()
 
   -- lspconfig.eslint.setup({})
 
-  lspconfig.rust_analyzer.setup({})
 
   lspconfig.gopls.setup({})
 
@@ -63,17 +80,7 @@ return function()
 
   lspconfig.jdtls.setup({})
 
-  lspconfig.nil_ls.setup({
-    settings = {
-      ["nil"] = {
-        formatting = {
-          command = { "nixfmt" },
-        },
-      },
-    },
-  })
 
-  lspconfig.lua_ls.setup({})
 
 
   local capabilities = vim.lsp.protocol.make_client_capabilities()
