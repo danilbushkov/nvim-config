@@ -5,9 +5,9 @@ return {
     "L3MON4D3/LuaSnip",
     "hrsh7th/cmp-nvim-lsp"
   },
-  opts = function()
+  config = function()
     local cmp = require("cmp")
-    return {
+    cmp.setup({
       completion = {
         autocomplete = false
       },
@@ -33,6 +33,6 @@ return {
         { name = "nvim_lsp" },
         { name = "luasnip" },
       })
-    }
+    })
   end
 }
