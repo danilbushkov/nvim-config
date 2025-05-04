@@ -52,6 +52,8 @@ return function()
     },
   })
 
+  vim.lsp.enable("markdown-oxide")
+
   -- ### deprecated ###
   local lspconfig = require("lspconfig")
 
