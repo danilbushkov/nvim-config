@@ -52,7 +52,7 @@ return function()
     },
   })
 
-  vim.lsp.enable("markdown-oxide")
+  vim.lsp.enable("marksman")
 
   -- ### deprecated ###
   local lspconfig = require("lspconfig")
