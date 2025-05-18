@@ -36,10 +36,10 @@ return function()
   })
 
 
+  vim.lsp.enable("gopls")
 
   vim.lsp.enable("lua_ls")
   vim.lsp.enable("rust_analyzer")
-
 
   vim.lsp.enable("nil_ls")
   vim.lsp.config("nil_ls", {
