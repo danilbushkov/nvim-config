@@ -54,6 +54,15 @@ return function()
 
   vim.lsp.enable("marksman")
 
+  vim.lsp.enable("intelephense")
+  vim.lsp.enable("phpactor")
+  vim.lsp.config("phpactor", {
+    on_attach = function(client)
+      client.server_capabilities.definitionProvider = false
+      client.server_capabilities.referencesProvider = false
+    end
+  })
+
   -- ### deprecated ###
   local lspconfig = require("lspconfig")
 
@@ -70,9 +79,9 @@ return function()
   -- lspconfig.eslint.setup({})
 
 
-  lspconfig.gopls.setup({})
+  -- lspconfig.gopls.setup({})
 
-  lspconfig.phpactor.setup({})
+  -- lspconfig.phpactor.setup({})
 
   lspconfig.dockerls.setup({})
 
