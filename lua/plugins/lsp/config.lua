@@ -64,50 +64,50 @@ return function()
   })
 
   -- ### deprecated ###
-  local lspconfig = require("lspconfig")
-
-
-  lspconfig.ts_ls.setup({
-    on_attach = function(client)
-      client.server_capabilities.document_formatting = false
-      client.server_capabilities.document_range_formatting = false
-      client.server_capabilities.documentFormattingProvider = false
-      client.server_capabilities.documentRangeFormattingProvider = false
-    end,
-  })
-
-  -- lspconfig.eslint.setup({})
-
-
-  -- lspconfig.gopls.setup({})
-
-  -- lspconfig.phpactor.setup({})
-
-  lspconfig.dockerls.setup({})
-
-  lspconfig.yamlls.setup({})
-
-  lspconfig.texlab.setup({})
-
-  lspconfig.jdtls.setup({})
-
-
-
-
-  local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-  lspconfig.cssls.setup({
-    capabilities = capabilities,
-
-  })
-
-  lspconfig.jsonls.setup({
-    capabilities = capabilities,
-  })
-
-
-  lspconfig.html.setup({
-    capabilities = capabilities,
-  })
+  --  local lspconfig = require("lspconfig")
+  --
+  --
+  --  lspconfig.ts_ls.setup({
+  --    on_attach = function(client)
+  --      client.server_capabilities.document_formatting = false
+  --      client.server_capabilities.document_range_formatting = false
+  --      client.server_capabilities.documentFormattingProvider = false
+  --      client.server_capabilities.documentRangeFormattingProvider = false
+  --    end,
+  --  })
+  --
+  --  -- lspconfig.eslint.setup({})
+  --
+  --
+  --  -- lspconfig.gopls.setup({})
+  --
+  --  -- lspconfig.phpactor.setup({})
+  --
+  --  lspconfig.dockerls.setup({})
+  --
+  --  lspconfig.yamlls.setup({})
+  --
+  --  lspconfig.texlab.setup({})
+  --
+  --  lspconfig.jdtls.setup({})
+  --
+  --
+  --
+  --
+  --  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  --  capabilities.textDocument.completion.completionItem.snippetSupport = true
+  --
+  --  lspconfig.cssls.setup({
+  --    capabilities = capabilities,
+  --
+  --  })
+  --
+  --  lspconfig.jsonls.setup({
+  --    capabilities = capabilities,
+  --  })
+  --
+  --
+  --  lspconfig.html.setup({
+  --    capabilities = capabilities,
+  --  })
 end
