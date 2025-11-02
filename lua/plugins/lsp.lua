@@ -8,7 +8,7 @@ return {
       intelephense = {},
       phpactor = {},
 
-      docker_language_server = {},
+      dockerls = {},
       yamlls = {},
     },
   },
